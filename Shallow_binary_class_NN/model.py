@@ -206,8 +206,4 @@ def predict(X, Y, parameters):
 
     y_pred = np.where(y_pred > 0.5, 1, 0)
 
-    a = y_pred[y_pred != Y]
-
-    b = len(a)
-
     return 1 - len(y_pred[y_pred != Y]) / Y.shape[1]
