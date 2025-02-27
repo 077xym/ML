@@ -30,6 +30,6 @@ if __name__ == "__main__":
     print("train_x's shape: " + str(train_x.shape))
     print("test_x's shape: " + str(test_x.shape))
     layers_dims = [12288, 20, 7, 5, 1]
-    params = DNN(train_x, train_y, layers_dims, iterations=2500, learning_rate=0.0075)
+    params = DNN(train_x, train_y, layers_dims, iterations=1000, learning_rate=0.005)
     pred_train = predict(test_x, test_y, params)
     print(pred_train)
