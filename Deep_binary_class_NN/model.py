@@ -47,7 +47,7 @@ def backward_relu(x):
 def initialize_weights(layers_dims):
     parameters = {}
     for l in range(1, len(layers_dims)):
-        parameters[f'W{l}'] = np.random.randn(layers_dims[l], layers_dims[l - 1]) / np.sqrt(layers_dims[l-1])
+        parameters[f'W{l}'] = 2 * np.random.randn(layers_dims[l], layers_dims[l - 1]) / np.sqrt(layers_dims[l-1])
         parameters[f'b{l}'] = np.zeros((layers_dims[l], 1))
     return parameters
 
