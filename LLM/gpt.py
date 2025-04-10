@@ -47,7 +47,7 @@ def get_batch(split):
     x, y = x.to(device), y.to(device)
     return x, y
 
-@torch.no_grad()
+@torch.inference_mode()
 def estimate_loss():
     out = {}
     model.eval()
