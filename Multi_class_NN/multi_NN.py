@@ -102,3 +102,6 @@ acc_test = correct_test / len(y_test)
 print(y_train_pred_label[:50], y_train[:50])
 print(y_test_pred_label[:50], y_test[:50])
 print(f'Train Accuracy: {acc_train:.4f}% | Test Accuracy: {acc_test:.4f}%')
+
+# save
+torch.save(model.state_dict(), './model.pth')
